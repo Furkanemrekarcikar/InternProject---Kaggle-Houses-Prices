@@ -26,14 +26,17 @@ print("RMSE: ", rmse)
 
 mae = mean_absolute_error(y_test, y_pred)
 mape = mean_absolute_percentage_error(y_test, y_pred)
+r2_scoree = r2_score(y_test,y_pred)
 
 print("MAE: ", mae)
 print("RMSE: ", rmse)
 print("MAPE: ", mae)
+print(r2_scoree)  # 0.78
 
 neg_mse_scores = cross_val_score(reg_model, X_train, y_train, cv=10, scoring='neg_mean_squared_error')
 
 rmse_scores = np.sqrt(-neg_mse_scores)
 
 print("Katlama Başına RMSE:", rmse_scores)
+
 print("Ortalama RMSE:", rmse_scores.mean())
