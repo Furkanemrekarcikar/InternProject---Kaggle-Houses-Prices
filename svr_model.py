@@ -64,8 +64,10 @@ svr_model_final = svr_model.set_params(**grid_search.best_params_).fit(X_train_s
 y_pred = svr_model.predict(X_test_scaled)
 rmse_final = np.sqrt(mean_squared_error(y_test, y_pred))
 mae_final = mean_absolute_error(y_test, y_pred)
+r2 = r2_score(y_test,y_pred)
 
 print("rmse: ",rmse_final)  #26563
 print("mae: ", mae_final)   #17385
+print("r2:", r2)  #0.81
 
 
