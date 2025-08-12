@@ -56,4 +56,5 @@ r2_scoree = r2_score(y_test, y_pred)
 
 print("RMSE:", rmse_final)
 print("MAE :", mae_final)
-print("R2 score:", r2_scoree)
+print("R2 score:", r2_scoree)  # 0.80
+
