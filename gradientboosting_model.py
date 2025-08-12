@@ -60,4 +60,5 @@ mae = mean_absolute_error(y_test, y_pred)
 r2_score = r2_score(y_test, y_pred)
 print(rmse)   # 30.497
 print(mae)    # 15.107
-print(r2_score)
+
+print(r2_score) #0.81
