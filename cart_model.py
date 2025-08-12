@@ -57,6 +57,7 @@ y_pred = cart_model_final.predict(X_test)
 
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 mae = mean_absolute_error(y_test, y_pred)
-
+r2 = r2_score(y_test, y_pred)
 print("rmse: ", rmse)  # 40.383
 print("mae: ", mae)    # 28752
+print("r2: ", r2)   #0.735
